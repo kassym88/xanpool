@@ -9,7 +9,7 @@ const SearchPage: React.FC = () => {
   const [userName, setUserName] = React.useState<string>('');
 
   const search = React.useCallback(() => {
-    const url = withParams(ROUTES.REPOS, [{name: 'userName', val: userName}]);
+    const url = withParams(ROUTES.REPOS, {userName});
     history.push(url);
   }, [userName, history]);
 

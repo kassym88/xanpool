@@ -33,7 +33,7 @@ const ReposPage: React.FC = () => {
 
   return (
     <ul data-testid="ReposPage">{
-      repos.map(repo => <li key={repo.name}><Link to={withParams(ROUTES.CONTENT, [{name: 'userName', val: userName}, {name: 'repo', val: repo.name}])}>{repo.name}</Link></li>)
+      repos.map(repo => <li key={repo.name}><Link to={withParams(ROUTES.CONTENT, {userName, repo: repo.name})}>{repo.name}</Link></li>)
     }</ul>
   );
 };
